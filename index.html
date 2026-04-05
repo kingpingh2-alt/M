@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GreenDrive Pro</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<!-- CHART -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header>
+  <h2 class="logo">GreenDrive ⚡</h2>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="left">
+    <h1>Drive Smart.<br><span>Save More.</span></h1>
+    <p>Compare Petrol, Diesel & EV costs instantly.</p>
+    <a href="#calc" class="btn">Try Calculator ↓</a>
+  </div>
+
+  <div class="right">
+    <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a">
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section id="calc" class="calculator">
+
+  <h2>⚡ EV vs Petrol vs Diesel</h2>
+
+  <div class="card">
+    <input type="number" id="km" placeholder="Daily KM Driven">
+    <input type="number" id="petrol" placeholder="Petrol Price (₹/L)">
+    <input type="number" id="diesel" placeholder="Diesel Price (₹/L)">
+    <input type="number" id="electric" placeholder="Electricity Cost (₹/kWh)">
+    <input type="number" id="mileage" placeholder="Mileage (km/L)">
+
+    <button onclick="calculate()">Calculate</button>
+  </div>
+
+  <div class="result">
+    <p id="petrolRes"></p>
+    <p id="dieselRes"></p>
+    <p id="evRes"></p>
+    <h2 id="best"></h2>
+  </div>
+
+  <canvas id="chart"></canvas>
+
+  <div class="info">
+    <p>⚡ EV assumes ~6 km per unit</p>
+    <p>⛽ Fuel cost based on mileage</p>
+    <p>📅 Monthly = Daily × 30</p>
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
